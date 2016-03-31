@@ -33,21 +33,12 @@ if (mysqli_num_rows($result) == 1) {
 	setcookie("auth", "1", time()+60*30, "/", "", 0);
 
 	//create display string
-	$display_block = "<p><h1>Welcome ".$f_name." ".$l_name."!</h1></p>";
+	header("Location:welcomePage.html");
 } else {
 	//redirect back to login form if not authorized
 	header("Location: userlogin.html");
 	exit;
 }
 }
-             ?> 
-<html> 
-<head> 
-<title></title> 
-</head>
-<body>
-    <?php echo "$display_block"; ?>
-    
-</body> 
-</html> 
+             ?>
 

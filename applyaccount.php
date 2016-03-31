@@ -22,9 +22,8 @@ Age:<input type='number' size='12' name='age'><br>
 <?php
 } else {
     $mysqli = mysqli_connect("localhost", "root", "marbles", "webProject");
-    $email = filter_input(INPUT_POST, 'email');
-    $targetemail =  strtolower($email);               
-        $sql = "SELECT * FROM members WHERE email = '".$targetemail."'";
+    $email = filter_input(INPUT_POST, 'email');              
+        $sql = "SELECT * FROM members WHERE email = '$email'";
         $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
                     if (mysqli_num_rows($result)==1 ) {
                         echo "Your email address has already been used! ".
@@ -53,16 +52,16 @@ Gender(male or female):<input type='text' size='12' maxlength='6' name='gender'>
                     }
                     
                     else {
+                        $email = filter_input(INPUT_POST, 'email');
                         $Fname = filter_input(INPUT_POST, 'Fname');
                         $Lname = filter_input(INPUT_POST, 'Lname');
                         $pass = filter_input(INPUT_POST, 'password');
                         $age = filter_input(INPUT_POST, 'age');
-                        $gender = filter_input(INPUT_POST, 'gender');
-                        $sql = 'INSERT INTO members (fname, lname, email, password, age) VALUES ("'.
-                                $Fname.'", "'.$Lname.'", "'.$email.'",PASSWORD("'.$pass.'")';
+                        $sql = "INSERT INTO members VALUES ('$Fname', '$Lname',"
+                                . " '$email',PASSWORD('$pass'), '$age')";
                         mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
                     echo '<p>Your new account has been created. Thank you for joining us!</p>';
-                    echo "<A HREF=userlogin.html'>Go here to login</A>" ."</body>";
+                    echo "<A HREF='userlogin.html'>Go here to login</A>" ."</body>";
                     }
 }
 ?> 
