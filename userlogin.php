@@ -14,7 +14,7 @@ $mysqli = mysqli_connect("localhost", "root", "marbles", "webProject");
 
 $targetemail = filter_input(INPUT_POST, 'email');
 $targetpasswd = filter_input(INPUT_POST, 'password');
-$sql = "SELECT firstname, lastname FROM members WHERE email = '".$targetemail.
+$sql = "SELECT fname, lname FROM members WHERE email = '".$targetemail.
         "' AND password = PASSWORD('".$targetpasswd."')";
 
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
@@ -25,29 +25,20 @@ if (mysqli_num_rows($result) == 1) {
 
 	//if authorized, get the values of f_name l_name
 	while ($info = mysqli_fetch_array($result)) {
-		$f_name = stripslashes($info['firstname']);
-		$l_name = stripslashes($info['lastname']);
+		$f_name = stripslashes($info['fname']);
+		$l_name = stripslashes($info['lname']);
 	}
 
 	//set authorization cookie
 	setcookie("auth", "1", time()+60*30, "/", "", 0);
 
 	//create display string
-	$display_block = "<p><h1>Welcome ".$f_name." ".$l_name."!</h1></p>";
+	header("Location:welcomePage.html");
 } else {
 	//redirect back to login form if not authorized
 	header("Location: userlogin.html");
 	exit;
 }
 }
-             ?> 
-<html> 
-<head> 
-<title></title> 
-</head>
-<body>
-    <?php echo "$display_block"; ?>
-    
-</body> 
-</html> 
+             ?>
 
