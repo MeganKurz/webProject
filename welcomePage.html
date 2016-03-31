@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>Welcome Page</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <form method="post" action="foodSelection.php">
+<!-- <form method="post" action="foodSelection.php">
          <fieldset><legend>Choose a Province</legend>
             <select name="list">
                 <option value ="BC">British Columbia</option>
@@ -32,5 +19,101 @@ and open the template in the editor.
             <input type="submit" name="submit" value="login"/>
         </fieldset>
         </form>
-    </body>
+-->
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Welcome Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css' />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    </head>
+    <body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#">Canada Map of Food</a></h1>
+			</div>
+		</div>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						<h2 class="title"><a href="#">Food Map</a></h2>
+						<div class="entry">
+							<div id="map"></div>
+    								<script src = "mapGen.js"></script>
+
+							</div>
+						</div>
+				<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>Map of Canada</h2>
+							<p>click on a province for some information</p>
+						</li>
+										
+						<li>
+							<h2>Choose a Province/Territory</h2>
+							<ul>
+							<form method="post" action="">
+        						 <fieldset>
+            
+                						<input type="checkbox" name="BC" value ="BC">British Columbia<br>
+               							<input type="checkbox" name="AB" value ="AB">Alberta<br>
+                						<input type="checkbox" name="SK" value = "SK">Saskatchewan<br>
+                						<input type="checkbox" name="MB" value = "MB">Manitoba<br>
+                						<input type="checkbox" name="NB" value = "NB">New Brunswick<br>
+                						<input type="checkbox" name="PE" value = "PE">Prince Edward Island<br>
+                						<input type="checkbox" name="NU" value = "NU">Nunavut<br>
+               							<input type="checkbox" name="NL" value = "NL">Newfoundland and Labrador<br>
+               							<input type="checkbox" name="NT" value = "NT">Northwest Territories<br>
+                						<input type="checkbox" name="NS" value = "NS">Nova Scotia<br>
+                						<input type="checkbox" name="ON" value = "ON">Ontario<br>
+                						<input type="checkbox" name="QC" value = "QC">Quebec<br>
+                						<input type="checkbox" name="YT" value = "YT">Yukon Territory<br>
+                
+        						 </fieldset>
+							</ul>
+						</li>
+						<li>
+							<h2>Choose food and or drink</h2>
+							<ul>
+								<form action="">
+									<input type="checkbox" checked = "True" name="food" value="food">Food<br>
+									<input type="checkbox" checked = "True" name="drink" value="drink">Drink<br>
+								</form>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<!-- end #footer -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key = AIzaSyAxhaBWFeRyn_rLmPbAOfZt2D6wMWseHLY&callback=initMap"></script>
+<script type = "text/javascript" src = "http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src = "fetchData.js"></script>
+
+</body>
 </html>
+ 
