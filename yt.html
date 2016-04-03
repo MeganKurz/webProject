@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>food</title>
+</head>
+<body style="background-color: bisque">
+<div>
+<h1>Saskatchewan</h1>
+<img src="photos/SK.jpg" alt="Picture of Seskatchewan" width="400" height="290">
+<pre style="float:right"><h4>
+Saskatchewan Food and Drink
+You can find a good selection of restaurants in all the province's cities and major towns catering 
+to all tastes and budgets. Alcohol is sold only in licensed stores, licensed restaurants, cocktail lounges, 
+and dining and beverage rooms. Retail outlets operate throughout the province.
+Specialities: 
+- Whitefish and pickerel are marketed by aboriginal (First Nations) co-operatives.
+- Wild rice harvested by First Nations people is an excellent accompaniment to the abundant wild fowl which 
+includes partridge, prairie chicken, wild duck and goose.
+- Saskatoon berries, similar to blueberries, are used for jams, jellies and saskatoon berry pie, often eaten with fresh
+cream. Other wild berries include pinchberries and cranberries, which make a tart and tangy jelly, ideal with wild fowl meals.
+
+
+</h4></pre>
+<img id="wildrice" src="photos/wildrice.jpg" alt="this is a picture of wild rice" width="150" height="100">
+<img id="partridge" src="photos/partridge.jpg" alt="this is a picture of partridge" width="150" height="100">
+<button onclick="getpartridge()">recipe for partridge!</button>
+<img id="wildduck" src="photos/wildduck.jpg" alt="this is a picture of wild duck" width="150" height="100">
+<button onclick="getwildduck()">recipe for wild duck!</button><br>
+</div>
+<div>
+<p id="rec"></p>
+<br>
+</div>
+    <script>
+        function getStew() {
+    var x = "stew recipe";
+    document.getElementById("rec").innerHTML=x;
+	 }
+    </script>
+</body>
+</html>
+
