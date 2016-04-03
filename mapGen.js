@@ -179,6 +179,10 @@ function createPopup(string, center){
 
 }
 
+function stew(){
+document.getElementById("recipe").innerHTML = "Hello JavaScript";
+}
+
 
 
 
