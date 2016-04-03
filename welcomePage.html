@@ -1,32 +1,5 @@
-<!-- <form method="post" action="foodSelection.php">
-         <fieldset><legend>Choose a Province</legend>
-            <select name="list">
-                <option value ="BC">British Columbia</option>
-                <option value ="AB">Alberta</option>
-                <option value = "SK">Saskatchewan</option>
-                <option value = "MB">Manitoba</option>
-                <option value = "NB">New Brunswick</option>
-                <option value = "PE">Prince Edward Island</option>
-                <option value = "NU">Nunavut</option>
-                <option value = "NL">Newfoundland and Labrador</option>
-                <option value = "NT">Northwest Territories</option>
-                <option value = "NS">Nova Scotia</option>
-                <option value = "ON">Ontario</option>
-                <option value = "QC">Quebec</option>
-                <option value = "YT">Yukon Territory</option>
-                
-            </select>
-            <input type="submit" name="submit" value="login"/>
-        </fieldset>
-        </form>
--->
 
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Welcome Page</title>
@@ -69,8 +42,7 @@ and open the template in the editor.
 										
 						<li>
 							<h2>Choose a Province/Territory</h2>
-							<ul>
-							<form method="post" action="">
+							<form method="post" action="foodSelection.php">
         						 <fieldset>
             
                 						<input type="checkbox" name="BC" value ="BC">British Columbia<br>
@@ -88,16 +60,14 @@ and open the template in the editor.
                 						<input type="checkbox" name="YT" value = "YT">Yukon Territory<br>
                 
         						 </fieldset>
-							</ul>
+                                                        </form>
 						</li>
 						<li>
 							<h2>Choose food and or drink</h2>
-							<ul>
-								<form action="">
-									<input type="checkbox" checked = "True" name="food" value="food">Food<br>
-									<input type="checkbox" checked = "True" name="drink" value="drink">Drink<br>
-								</form>
-							</ul>
+								<form action="loadmap.php">
+									<input id ="food" type="checkbox" name="food" value="food" checked>Food<br>
+                                                                        <input id = "drink" type="checkbox" name="drink" value="drink" checked>Drink<br>
+                                                                </form>
 						</li>
 					<li>
 					<button type="button" onclick="initOverlay()" id='overlay'>Create Overlay</button>
@@ -114,8 +84,6 @@ and open the template in the editor.
 <!-- end #footer -->
 
 <script src="https://maps.googleapis.com/maps/api/js?key = AIzaSyAxhaBWFeRyn_rLmPbAOfZt2D6wMWseHLY&callback=initMap"></script>
-<script type = "text/javascript" src = "http://code.jquery.com/jquery-1.6.2.min.js"></script>
-<script src = "fetchData.js"></script>
 
 </body>
 </html>

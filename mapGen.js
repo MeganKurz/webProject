@@ -1,7 +1,7 @@
-
+var map;
 function initMap() {
     var mapDiv = document.getElementById('map');
-    var map = new google.maps.Map(mapDiv, {center: {lat:63.141651, lng: -113.378906}, zoom: 3});
+    map = new google.maps.Map(mapDiv, {center: {lat:63.141651, lng: -113.378906}, zoom: 3});
 }
 
 google.maps.event.addDomListener(window, 'load', initMap);
@@ -9,7 +9,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
 
 function initOverlay() {
 var mapDiv = document.getElementById('map');
-var map = new google.maps.Map(mapDiv, {center: {lat:63.141651, lng: -113.378906}, zoom: 3});
+map = new google.maps.Map(mapDiv, {center: {lat:63.141651, lng: -113.378906}, zoom: 3});
 
 var BC = new google.maps.Circle({
   center: {lat: 53.726668, lng: -127.647621},
@@ -143,6 +143,39 @@ ON.setMap(map);
 QC.setMap(map);
 YT.setMap(map);
 
+BC.addListener('click', sendLocation("BC", BC.center));
+AB.addListener('click', sendLocation("AB", AB.center));
+SK.addListener('click', sendLocation("SK", SK.center));
+MB.addListener('click', sendLocation("MB", MB.center));
+NB.addListener('click', sendLocation("NB", NB.center));
+PE.addListener('click', sendLocation("PE", PE.center));
+NU.addListener('click', sendLocation("NU", NU.center));
+NL.addListener('click', sendLocation("NL", NL.center));
+NT.addListener('click', sendLocation("NT", NT.center));
+NS.addListener('click', sendLocation("NS", NS.center));
+ON.addListener('click', sendLocation("ON", ON.center));
+QC.addListener('click', sendLocation("QC", QC.center));
+YT.addListener('click', sendLocation("YT", YT.center));
+}
+
+function sendLocation(location, center){
+    var prov = location;
+    var centr = center;
+    var food = document.getElementbyID("food").isChecked();
+    var drink = document.getElementbyID("drink").isChecked();
+    window.location.href = "loadmap.php?province=" + prov;
+    window.location.href = "loadmap.php?useFood=" + food;
+    window.location.href = "loadmap.php?useDrink=" + drink;
+    window.location.href = "loadmap.php?loc=" + centr;
+    window.location = "loadmap.php";
+}
+
+function createPopup(string, center){
+    infowindow = new google.maps.InfoWindow({
+                    position: center,
+                    content: string
+                });
+    infowindow.open(map);
 }
 
 
