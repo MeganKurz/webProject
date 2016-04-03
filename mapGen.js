@@ -142,7 +142,7 @@ NS.setMap(map);
 ON.setMap(map);
 QC.setMap(map);
 YT.setMap(map);
-
+}
 BC.addListener('click', sendLocation("BC", BC.center));
 AB.addListener('click', sendLocation("AB", AB.center));
 SK.addListener('click', sendLocation("SK", SK.center));
@@ -156,7 +156,7 @@ NS.addListener('click', sendLocation("NS", NS.center));
 ON.addListener('click', sendLocation("ON", ON.center));
 QC.addListener('click', sendLocation("QC", QC.center));
 YT.addListener('click', sendLocation("YT", YT.center));
-}
+
 
 function sendLocation(location, center){
     var prov = location;
@@ -176,8 +176,8 @@ function createPopup(string, center){
                     content: string
                 });
     infowindow.open(map);
-}
 
+}
 
 
 
