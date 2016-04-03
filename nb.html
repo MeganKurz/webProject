@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <title>food</title>
@@ -11,31 +11,67 @@
 New Brunswick Food and Drink
 The province is famous for seafood. Fredericton, Saint John and Moncton offer international cuisine.
 Specialities: 
-� Seafood highlights include lobster from Shediac and delicately flavoured Atlantic salmon served with butter, 
+- Seafood highlights include lobster from Shediac and delicately flavoured Atlantic salmon served with butter, 
 new potatoes and fiddleheads (young fronds of ostrich fern served with butter and seasoned or used cold in salads).
-� New Brunswick dulse, an edible seaweed, is a local favorite.
-� Home-made baked beans and steamed brown bread are served as traditional Saturday 
+- New Brunswick dulse, an edible seaweed, is a local favorite.
+- Home-made baked beans and steamed brown bread are served as traditional Saturday 
 night supper.
-� Rap�e pie, made with chicken, is an Acadian speciality for Sundays or festivals.
-� La r�pure is a potato and salted pork dish.
+- Rapee pie, made with chicken, is an Acadian speciality for Sundays or festivals.
+- La rapure is a potato and salted pork dish.
 
 </h4></pre>
-<img id="lobstar" src="photos/lobstar.jpg" alt="this is a picture of a lobstar" width="150" height="100">
 <img id="beans" src="photos/beans.jpg" alt="this is a picture of baked beans" width="150" height="100">
-<button type="button" onclick="lobstar()">recipe for lobstar!</button>
+<img id="lobstar" src="photos/lobstar.jpg" alt="this is a picture of a lobstar" width="150" height="100">
+<button type="button" onclick="getlobstar()">recipe for lobster!</button>
 <img id="dulse" src="photos/dulse.jpg" alt="this is a picture of dulse" width="150" height="100">
-<button type="button" onclick="dulse()">recipe for dulse!</button><br>
-<p id="rec"></p>
-<script src = "foodRecipes.js"></script><br>
+<button type="button" onclick="getdulse()">recipe for dulse!</button><br>
+<div id="rec1" style="display:none;">
+<pre>
+Lobster Bisque Dewey
 
+4 Ounces Maine Lobster meat 
+2 Tablespoons butter 
+1 Tablespoon flour 
+A Dash of sherry (optional) 
+Paprika 
+1/2 Cup cream 
+1/2 Cup light cream 
+1/4 Teaspoon salt 
+A Dash cayenne pepper 
+ 
+In a saucepan, melt butter. Add Maine Lobster meat and cook over moderate heat for 3 minutes, stirring constantly so 
+Lobster won't burn. Stir in flour. Add cream, light cream, salt, and cayenne pepper. Cook, stirring constantly, until 
+soup is slightly thickened and very hot. Divide into bouillon cups and sprinkle with paprika. A dash of sherry may be added.
+
+
+</pre>
+<br>
 </div>
+<div id="rec2" style="display:none;">
+<pre>
+Dulse salad
 
-<script>
-function stew() {
-document.getElementById("rec").innerHTML="kdsjlksdjskldjjkakcsdbcalkcjdbakdjcbjdk";
- }
-</script>
+1 c dulse, rinsed and cut into small pieces
+2 cups sprouts
+1/2 cup sliced red and yellow peppers
+1/2 cup sliced scallions or red onion
+1 stalk celery, sliced
+1/2 cup avocado, scopped with a melon ball tool
+1 tomato cut into small wedges
 
+Combine the above salad ingredients and serve on a bed of greens, topped with dressing.
+Dressing: lemon juice, raw honey, and tahini, in proportion to your taste
+
+</pre>
+<br>
+</div>
+    <script>
+        function getlobstar() { 
+document.getElementById("rec1").style.display="initial";
+	 }
+ function getdulse() {
+document.getElementById("rec2").style.display="initial"; 
+	 }
+    </script>
 </body>
 </html>
-
