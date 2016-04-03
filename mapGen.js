@@ -142,7 +142,7 @@ NS.setMap(map);
 ON.setMap(map);
 QC.setMap(map);
 YT.setMap(map);
-}
+
 BC.addListener('click', sendLocation("BC", BC.center));
 AB.addListener('click', sendLocation("AB", AB.center));
 SK.addListener('click', sendLocation("SK", SK.center));
@@ -178,10 +178,11 @@ function createPopup(string, center){
     infowindow.open(map);
 
 }
-
-function stew(){
-document.getElementById("recipe").innerHTML = "Hello JavaScript";
 }
+function stew() {
+	document.getElementById("rec").innerHTML="kdsjlksdjskldjjkakcsdbcalkcjdbakdjcbjdk";
+	 }
+
 
 
 
