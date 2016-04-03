@@ -28,20 +28,62 @@ Tea and Carnation milk.
 </h4></pre>
 <img id="crubeens" src="photos/crubeens.jpg" alt="this is a picture of crubeens" width="150" height="100">
 <img id="saltyfish" src="photos/saltyfish.jpg" alt="this is a picture of salted fish" width="150" height="100">
-<button type="button" onclick="lobstar()">recipe for curbeens!</button>
+<button type="button" onclick="getcurbeens()">recipe for crubeens!</button>
 <img id="blackhorse" src="photos/blackhorse.jpg" alt="this is a picture of black horse beer" width="150" height="100">
-<button type="button" onclick="dulse()">recipe for black horse beer!</button><br>
-<p id="rec"></p>
-<script src = "foodRecipes.js"></script><br>
+<button type="button" onclick="getblackhorse()">recipe with black horse beer!</button><br>
+<div id="rec1" style="display:none;">
+<pre>
+Crubeens
 
+6 pig's trotters (feet), from the hind legs
+1 onion stuck with 6 cloves
+1 carrot
+1 bay leaf
+12 peppercorns
+Salt
+1 bunch parsley
+1 sprig thyme
+
+Combine pig's feet, onion, carrot, bay leaf, peppercorns, salt, parsley, and thyme in a heavy pot or Dutch oven and pour 
+in water to barely cover all.
+Gently bring contents to a boil. Reduce heat and simmer for at least 3 hours.
+Crubeens may be eaten hot or cold.
+Yield: 2 servings
+
+</pre>
+<br>
 </div>
+<div id="rec2" style="display:none;">
+<pre>
+Blackhorse Stew
 
-<script>
-function stew() {
-document.getElementById("rec").innerHTML="kdsjlksdjskldjjkakcsdbcalkcjdbakdjcbjdk";
- }
-</script>
+5 boneless pork chops, cut into cubes 
+2 tablespoons all-purpose flour 
+1/2 pound bacon, diced 
+1 large onion, diced 
+3 tablespoons paprika 
+1 (12 fluid ounce) can or bottle beer 
+1 (14.5 ounce) can sauerkraut, drained 
+ 
+Preheat oven to 350 degrees F (175 degrees C).
+Toss pork and flour together in a bowl to coat.
+Place bacon in a large skillet and cook over medium-high heat until enough fat renders to coat the bottom of the pan; 
+add pork and onion. Cook and stir the mixture until completely browned, about 10 minutes. Drain about half the grease from the 
+skillet and return to heat.
+Season mixture with paprika; stir. Pour beer over the pork mixture, bring to a simmer, and cook 5 minutes.
+Spread sauerkraut into the bottom of a casserole dish. Pour pork mixture over the sauerkraut. Cover dish with aluminum foil.
+Bake in preheated oven for 45 minutes.
 
+</pre>
+<br>
+</div>
+    <script>
+        function getcurbeens() { 
+document.getElementById("rec1").style.display="initial";
+	 }
+ function getblackhorse() {
+document.getElementById("rec2").style.display="initial"; 
+	 }
+    </script>
 </body>
 </html>
-
