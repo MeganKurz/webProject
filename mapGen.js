@@ -157,6 +157,7 @@ ON.addListener('click', sendLocation("ON", ON.center));
 QC.addListener('click', sendLocation("QC", QC.center));
 YT.addListener('click', sendLocation("YT", YT.center));
 
+}
 
 function sendLocation(location, center){
     var prov = location;
@@ -178,10 +179,7 @@ function createPopup(string, center){
     infowindow.open(map);
 
 }
-}
-function stew() {
-	document.getElementById("rec").innerHTML="kdsjlksdjskldjjkakcsdbcalkcjdbakdjcbjdk";
-	 }
+
 
 
 
