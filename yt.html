@@ -5,38 +5,73 @@
 </head>
 <body style="background-color: bisque">
 <div>
-<h1>Saskatchewan</h1>
-<img src="photos/SK.jpg" alt="Picture of Seskatchewan" width="400" height="290">
+<h1>Yukon Territory</h1>
+<img src="photos/YT.jpg" alt="Picture of Yukon" width="400" height="290">
 <pre style="float:right"><h4>
-Saskatchewan Food and Drink
-You can find a good selection of restaurants in all the province's cities and major towns catering 
-to all tastes and budgets. Alcohol is sold only in licensed stores, licensed restaurants, cocktail lounges, 
-and dining and beverage rooms. Retail outlets operate throughout the province.
+Yukon Territory Food and Drink
+Some of the Yukon's food is very distinctive but difficult to produce commercially. There are restaurants 
+throughout the area, but the best selection is in Whitehorse and Dawson City. Most alcohol is imported from 
+other areas of Canada and the USA.
 Specialities: 
-- Whitefish and pickerel are marketed by aboriginal (First Nations) co-operatives.
-- Wild rice harvested by First Nations people is an excellent accompaniment to the abundant wild fowl which 
-includes partridge, prairie chicken, wild duck and goose.
-- Saskatoon berries, similar to blueberries, are used for jams, jellies and saskatoon berry pie, often eaten with fresh
-cream. Other wild berries include pinchberries and cranberries, which make a tart and tangy jelly, ideal with wild fowl meals.
+- Moose meat is cooked in several ways, from steaming to smoking or roasting, and accompanied by sourdough and vegetables.
+- Dall sheep, mountain goat, caribou and porcupine are also eaten, often in burgers.
+- Wild seafood includes Arctic grayling, trout, Kokanee salmon, Alaska king crab and halibut.
+- Yukon's gold mining past is reflected in some specialities, such as buffalo burgers, musk ox chops and Alaskan salmon.
+Regional drinks: 
+Whitehorse is home to the Yukon Brewing Company, which produces unique lagers and ales.
+The Downtown Hotel in Dawson City is famous for the Sourtoe cocktail, which is served with an actual dehydrated human toe 
+preserved in salt.
 
 
 </h4></pre>
-<img id="wildrice" src="photos/wildrice.jpg" alt="this is a picture of wild rice" width="150" height="100">
-<img id="partridge" src="photos/partridge.jpg" alt="this is a picture of partridge" width="150" height="100">
-<button onclick="getpartridge()">recipe for partridge!</button>
-<img id="wildduck" src="photos/wildduck.jpg" alt="this is a picture of wild duck" width="150" height="100">
-<button onclick="getwildduck()">recipe for wild duck!</button><br>
+<img id="moose" src="photos/moose.jpg" alt="this is a picture of moose meat" width="150" height="100">
+<img id="buffalo" src="photos/buffalo.jpg" alt="this is a picture of a buffalo burger" width="150" height="100">
+<button onclick="getbuffalo()">recipe for a buffalo burger!</button>
+<img id="sourtoe" src="photos/sourtoe.jpg" alt="this is a picture of sourtoe cocktail" width="150" height="100">
+<button onclick="getsourtoe()">recipe for sourtoe cocktail!</button><br>
+<div id="rec1" style="display:none;">
+<pre>
+Buffalo burger
+
+1 pound ground buffalo meat
+1 small Vidalia or other sweet onion, finely chopped (about 1/4 cup)
+1 teaspoon Worcestershire sauce
+1/2 teaspoon salt
+1/8 teaspoon freshly ground pepper
+1/2 cup shredded reduced-fat sharp cheddar cheese
+4 English muffins, split
+4 romaine lettuce leaves, trimmed
+4 tomato slices
+
+In a medium bowl, combine the buffalo meat, onion, Worcestershire sauce, salt, and pepper; mix well to combine. 
+Divide and shape the mixture into 4 balls. With your finger make a deep indentation into each ball. Fill each hole with 
+2 tablespoons of the cheese. Pinch the meat closed to cover the cheese and shape each ball into a 3/4-inch-thick patty.
+Toast the English muffins.
+Spray a nonstick skillet with nonstick spray and heat over medium-high heat. Cook burgers 3-4 minutes per side for medium-rare.
+
+</pre>
+<br>
 </div>
-<div>
-<p id="rec"></p>
+<div id="rec2" style="display:none;">
+<pre>
+Sourtoe Cocktail
+
+1 ounce (minimum) of alcohol
+1 dehydrated toe
+garnish with courage
+
+Be sure to remember the most important rule: “You can drink it fast, you can drink it slow, but your lips have gotta touch the toe”
+
+</pre>
 <br>
 </div>
     <script>
-        function getStew() {
-    var x = "stew recipe";
-    document.getElementById("rec").innerHTML=x;
+        function getbuffalo() { 
+document.getElementById("rec1").style.display="initial";
+	 }
+ function getsourtoe() {
+document.getElementById("rec2").style.display="initial"; 
 	 }
     </script>
 </body>
 </html>
-

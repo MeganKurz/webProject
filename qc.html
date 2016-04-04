@@ -33,17 +33,43 @@ Apple, strawberry and other fruit wines from the Eastern Townships and other par
 <button onclick="getpoutine()">recipe for poutine!</button>
 <img id="maplecider" src="photos/maplecider.jpg" alt="this is a picture of maple cider" width="150" height="100">
 <button onclick="getmaplecider()">recipe for making maple cider!</button><br>
+<div id="rec1" style="display:none;">
+<pre>
+Poutine
+
+Make french fries as usual.
+Sprinkle Cheddar cheese curds over the top of the hot fries. ( Curds are sometimes replaced by Mozzarella curds 
+or shredded cheddar or mozzarella cheese. Not the true thing though!)
+Pour hot brown gravy over the top of the fries and curds. ( People use homemade or canned & some even use BBQ Sauce.) 
+"Poutine Sauce" is sold in grocery stores.) 
+
+</pre>
+<br>
 </div>
-<div>
-<p id="rec"></p>
+<div id="rec2" style="display:none;">
+<pre>
+Maple cider
+
+1 gallon apple cider (unpasteurized is best)
+2 cups maple syrup (use Grade B)
+
+Pour out two cups of the apple cider to make room for the syrup. Combine the cider and maple syrup in a carboy, cap with an 
+airlock, and allow to ferment naturally. It can help to gently warm the mixture so that the syrup combines with the cider, 
+but I didn’t really have a problem with it, and periodically shook or swirled the jug to mix.
+When the airlock stops bubbling, and the hydrometer reading stops declining, rack into bottles and let age at least 1 month.
+
+</pre>
 <br>
 </div>
     <script>
-        function getStew() {
-    var x = "stew recipe";
-    document.getElementById("rec").innerHTML=x;
+        function getpoutine() { 
+document.getElementById("rec1").style.display="initial";
+	 }
+ function getmaplecider() {
+document.getElementById("rec2").style.display="initial"; 
 	 }
     </script>
 </body>
 </html>
+
 

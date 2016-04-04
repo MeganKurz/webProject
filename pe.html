@@ -22,22 +22,61 @@ boiled in their skins, then mashed and served with lots of butter, salt and pepp
 - Fish cakes made with salt cod and potatoes
 
 </h4></pre>
-<img id="lobstar" src="photos/lobstar.jpg" alt="this is a picture of a lobster" width="150" height="100">
-<img id="potatos" src="photos/potato.jpg" alt="this is a picture of potatos" width="150" height="100">
+<img id="lobstar" src="photos/lobstar.jpg" alt="this is a picture of a lobster" width="150" height="150">
+<img id="potatos" src="photos/potato.jpg" alt="this is a picture of potatos" width="150" height="150">
 <button type="button" onclick="getpotatos()">recipe for potatos!</button>
 <img id="fishcakes" src="photos/fishcake.jpg" alt="this is a picture of fish cakes" width="190" height="150">
 <button type="button" onclick="getfishcakes()">recipe for fish cakes!</button><br>
-<p id="rec"></p>
-<script src = "foodRecipes.js"></script><br>
+<div id="rec1" style="display:none;">
+<pre>
+Easy Baked Potato Soup
+Servings: 8 
 
+5 medium russet potatoes
+6 tablespoons margarine
+2/3 cup all-purpose flour
+6 cups skim milk
+salt and pepper to taste
+1 cup sour cream (can use fat free)
+1 (3oz) jar real cooked bacon bits
+1 bunch green onions -- chopped
+1 (8oz) pkg shredded cheddar cheese
+
+Was and dry potatoes; pierce with a fork. Put in a white plastic grocery bag ( the kind from the check-out, not from 
+the produce section); tie a double knot. Microwave on high 10 min. Bag will puff up.
+Meanwhile, melt margarine in a large soup pot. Add flour; whisk to combine. Add milk slowly, whisking until lightly thickened.
+Remove bag of potatoes from oven. Carefully cut open bag. It will be very hot. After potatoes are cool enough to handle, chop potatoes, 
+including skins, and sprinkle with salt and pepper. Add to soup. Stir well and add sour cream, bacon, green onions and cheese. Reserve 
+some bacon, green onions and cheese for garnish. 
+
+</pre>
+<br>
 </div>
+<div id="rec2" style="display:none;">
+<pre>
+Fish cakes
 
-<script>
-function stew() {
-document.getElementById("rec").innerHTML="kdsjlksdjskldjjkakcsdbcalkcjdbakdjcbjdk";
- }
-</script>
+7 c. fish
+5 eggs
+4 c. crushed croutons
+1/2 tsp. salt
+1/2 tsp. pepper
+1 tbsp. lemon juice
+Cornflake crumbs
+Flour
 
+Grind fish, add next ingredients except for breading. Mix together and form "bun size patties". Roll in mixture of equal parts 
+cornflake crumbs and flour, seasoned with seasoning salt. Freeze on cookie sheet, then bag. Fry in butter flavored Crisco.
+</pre>
+<br>
+</div>
+    <script>
+        function getpotatos() { 
+document.getElementById("rec1").style.display="initial";
+	 }
+ function getfishcakes() {
+document.getElementById("rec2").style.display="initial"; 
+	 }
+    </script>
 </body>
 </html>
-
