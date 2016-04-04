@@ -1,9 +1,20 @@
 <?php
+header('Content-Type: application/json');
+$results = array();
+if(($_GET['arguments'][1]=='false')&&($_GET['arguments'][2]=='false')){
+    $results['error'] = 'Please select food or drink or both';
+}
+if(!isset($results['error'])){
+    $results['result'] = getData($_GET['arguments'][0],$_GET['arguments'][1],$_GET['arguments'][2]);
+}
+echo json_encode($results);
+
+
+function getData($province, $foods, $drinks){
 $mysqli = mysqli_connect("localhost", "root", "marbles", "webProject");
-$prov = $_GET['province'];
-$food = $_GET['useFood'];
-$drink = $_GET['useDrink'];
-$centr = $_GET['loc'];
+$prov = $province;
+$food = $foods;
+$drink = $drinks;
 if($food =="true" && $drink =="true"){
  $sql = "SELECT food.item, liquids.item FROM food INNER JOIN liquids "
          . "ON food.prov=liquids.prov WHERE food.prov=$prov"; 
@@ -11,28 +22,9 @@ if($food =="true" && $drink =="true"){
 else if($food == "true" && $drink == "false"){
     $sql = "SELECT item FROM food WHERE prov = $prov";
 }
-else if($food == "false" && $drink == "true"){
+else{
     $sql = "SELECT item FROM liquids WHERE prov = $prov";
 }
-else{
-    ?> <script> window.alert("Please check food or drink or both");
-        </script>
-        <?php
-        header("Location:welcomePage.html");
-    
+$sqlResults = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
+return $sqlResults;
 }
-$string = "<p>";
-$results = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-while ($items = mysqli_fetch_array($results)) {
-	if(!$string.contains($items["food.item"])){
-            $string += " ".$items['food.item'];
-        }
-        if(!$string.contains($items["liquids.item"])){
-            $string += " ".$items['liquids.item'];
-        }
-        if(!$string.contains($items["item"])){
-            $string += " ".$items['item'];
-        }
-	}
-?>
-        <script>createPopup(<?php $string ?>,<?php $centr ?>);</script>
