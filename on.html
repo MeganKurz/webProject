@@ -29,16 +29,51 @@ Regional drinks:
 <img id="fishchips" src="photos/fishchips.jpg" alt="this is a picture of fish chips" width="150" height="100">
 <button onclick="getfishchips()">recipe for fish and chips!</button>
 <img id="syrup" src="photos/syrup.jpg" alt="this is a picture of maple syrup" width="150" height="120">
-<button onclick="honey()">recipe for making maple syrup!</button><br>
+<button onclick="getsyrup()">recipe for making maple syrup!</button><br>
+<div id="rec1" style="display:none;">
+<pre>
+Fish and chips 
+
+1 3/4 c. all purpose flour
+1 tsp. baking soda
+Salt and pepper
+1 tbsp. white vinegar
+Approximately 1 c. liquid (1/2 beer, 1/2 water)
+2 tbsp. fresh white fish fillets (cod or haddock)
+Oil for deep frying
+2 lb. potatoes, peeled into thin strips
+
+Mix the dry ingredients in a large bowl. Mix the liquids in a measuring cup. Make a well in the center and 
+gradually add the liquid to make a smooth batter. If it is too thick, add a little more water. Allow the batter 
+to stand for about 1 hour. Rinse the potatoes after peeling and slicing into thin strips. Dry and sprinkle them 
+with salt before deep frying to golden.
+Dip the fish into flour and then in batter and place skin side down into the hot oil. (The fish should rise to 
+the surface within a minute if the oil is hot enough.) When the underside is golden, turn to finish the topside 
+(approximately 5 to 10 minutes depending upon thickness of the fish). Yields 6 servings.
+
+</pre>
+<br>
 </div>
-<div>
-<p id="rec"></p>
+<div id="rec2" style="display:none;">
+<pre>
+Homemade maple syrup
+
+1 cup water
+1 cup white sugar
+1 cup brouwn sugar
+1 tablespoon maple extract 
+
+Bring the water, white sugar, and brown sugar to a boil in a saucepan over medium-high heat. Reduce heat to 
+medium-low, and stir in the maple extract; simmer 3 minutes longer.
+</pre>
 <br>
 </div>
     <script>
-        function getStew() {
-    var x = "stew recipe";
-    document.getElementById("rec").innerHTML=x;
+        function getfishchips() { 
+document.getElementById("rec1").style.display="initial";
+	 }
+ function getsyrup() {
+document.getElementById("rec2").style.display="initial"; 
 	 }
     </script>
 </body>

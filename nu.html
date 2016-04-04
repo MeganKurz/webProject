@@ -25,22 +25,58 @@ Regional drinks:
 Melting glacier ice is collected and provides water in many communities. Bottled water is available.
 
 </h4></pre>
-<img id="mussels" src="photos/mussels.jpg" alt="this is a picture of a mussels" width="150" height="100">
 <img id="turbot" src="photos/turbot.jpg" alt="this is a picture of turbot" width="150" height="100">
+<img id="mussels" src="photos/mussels.jpg" alt="this is a picture of a mussels" width="150" height="100">
 <button type="button" onclick="getmussels()">recipe for mussels!</button>
 <img id="ice" src="photos/ice.jpg" alt="this is a picture of melting ice" width="150" height="150">
 <button type="button" onclick="getice()">how to collect melting glacier ice!</button><br>
-<p id="rec"></p>
-<script src = "mapGen.js"></script><br>
+<div id="rec1" style="display:none;">
+<pre>
+Mussels In A White Wine Sauce
 
+2 whole garlic cloves -- crushed
+2 tablespoons olive oil
+1 cup julienned onions
+1 pinch red pepper flakes
+2 sprigs fresh thyme
+1 cup dry white wine
+64 mussels - (abt 3 lbs)
+2 tablespoons chopped Italian parsley
+2 tablespoons butter
+2 tablespoons bread crumbs
+1/2 cup chicken stock -- (optional)
+
+In a deep skillet, cook the garlic cloves until golden in the olive oil. Add onions and cook until wilted. Add red 
+pepper flakes, thyme, and white wine, and bring to a boil. Then simmer for 2 minutes. 
+Add mussels and parsley. Cover tight and cook over medium flame until shells open (approximately 3 to 5 minutes).
+Add parsley, butter and bread crumbs, and if the mussels do not have enough juice, you can add chicken stock. Bring all 
+to a vigorous boil for 2 minutes, shaking the skillet well so that all ingredients mix well. 
+This recipe yields 4 servings. 
+
+</pre>
+<br>
 </div>
+<div id="rec2" style="display:none;">
+<pre>
+Melting glacier ice
+Meltwater is the water released by the melting of snow or ice, including glacial ice, tabular icebergs and ice shelves over oceans. 
+Meltwater is often found in the ablation zone of glaciers, where the rate of snow cover is reducing.
 
-<script>
-function stew() {
-document.getElementById("rec").innerHTML="kdsjlksdjskldjjkakcsdbcalkcjdbakdjcbjdk";
- }
-</script>
+When meltwater pools on the surface rather than flowing, it forms melt ponds. As the weather gets colder meltwater will often re-freeze. 
+Meltwater can collect or melt under the ice's surface. These pools of water, known as subglacial lakes can form due to geothermal heat 
+and friction, where the water can then be collected.
 
+</pre>
+<br>
+</div>
+    <script>
+        function getmussels() { 
+document.getElementById("rec1").style.display="initial";
+	 }
+ function getice() {
+document.getElementById("rec2").style.display="initial"; 
+	 }
+    </script>
 </body>
 </html>
 
