@@ -5,10 +5,9 @@ if(($_GET['arguments'][1]=='false')&&($_GET['arguments'][2]=='false')){
     $results['error'] = 'Please select food or drink or both';
 }
 if(!isset($results['error'])){
-    $results['result'] = getData($_GET['arguments'][0],$_GET['arguments'][1],$_GET['arguments'][2]);
+    $results['results'] = getData($_GET['arguments'][0],$_GET['arguments'][1],$_GET['arguments'][2]);
 }
 echo json_encode($results);
-exit;
 
 function getData($province, $foods, $drinks){
 $mysqli = mysqli_connect("localhost", "root", "marbles", "webProject");
