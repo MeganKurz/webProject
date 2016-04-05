@@ -230,11 +230,85 @@ function sendLocation(province, location){
 
 }
 
-function bc(){
-var bc = document.getElementById("bc").checked;
-if (bc==true){
-document.getElementById("link").innerHTML="heyyyy";}
+document.getElementById("bc").onchange=function(){
+if(document.getElementById("bc").checked==true){
+document.getElementById("1").innerHTML="<A HREF='bc.html'>Click link for more information on British Columbia</A>";}
+else{document.getElementById("1").innerHTML="";}
 }
+
+document.getElementById("ab").onchange=function(){
+if(document.getElementById("ab").checked==true){
+document.getElementById("2").innerHTML="<A HREF='ab.html'>Click link for more information on Alberta</A>";}
+else{document.getElementById("2").innerHTML="";}
+}
+
+document.getElementById("sk").onchange=function(){
+if(document.getElementById("sk").checked==true){
+document.getElementById("3").innerHTML="<A HREF='sk.html'>Click link for more information on Saskatchewan</A>";}
+else{document.getElementById("3").innerHTML="";}
+}
+
+document.getElementById("mb").onchange=function(){
+if(document.getElementById("mb").checked==true){
+document.getElementById("4").innerHTML="<A HREF='mb.html'>Click link for more information on Manitoba</A>";}
+else{document.getElementById("4").innerHTML="";}
+}
+
+document.getElementById("nb").onchange=function(){
+if(document.getElementById("nb").checked==true){
+document.getElementById("5").innerHTML="<A HREF='nb.html'>Click link for more information on New Brunswick</A>";}
+else{document.getElementById("5").innerHTML="";}
+}
+
+document.getElementById("pe").onchange=function(){
+if(document.getElementById("pe").checked==true){
+document.getElementById("6").innerHTML="<A HREF='pe.html'>Click link for more information on Prince Edward Island</A>";}
+else{document.getElementById("6").innerHTML="";}
+}
+
+document.getElementById("nu").onchange=function(){
+if(document.getElementById("nu").checked==true){
+document.getElementById("7").innerHTML="<A HREF='nu.html'>Click link for more information on Nunavut</A>";}
+else{document.getElementById("7").innerHTML="";}
+}
+
+document.getElementById("nl").onchange=function(){
+if(document.getElementById("nl").checked==true){
+document.getElementById("8").innerHTML="<A HREF='nl.html'>Click link for more information on Newfoundland and Labrador</A>";}
+else{document.getElementById("8").innerHTML="";}
+}
+
+document.getElementById("nt").onchange=function(){
+if(document.getElementById("nt").checked==true){
+document.getElementById("9").innerHTML="<A HREF='nt.html'>Click link for more information on Northwest Territories</A>";}
+else{document.getElementById("9").innerHTML="";}
+}
+
+document.getElementById("ns").onchange=function(){
+if(document.getElementById("ns").checked==true){
+document.getElementById("10").innerHTML="<A HREF='ns.html'>Click link for more information on Nova Scotia</A>";}
+else{document.getElementById("10").innerHTML="";}
+}
+
+document.getElementById("on").onchange=function(){
+if(document.getElementById("on").checked==true){
+document.getElementById("11").innerHTML="<A HREF='on.html'>Click link for more information on Ontario</A>";}
+else{document.getElementById("11").innerHTML="";}
+}
+
+document.getElementById("qc").onchange=function(){
+if(document.getElementById("qc").checked==true){
+document.getElementById("12").innerHTML="<A HREF='qc.html'>Click link for more information on Quebec</A>";}
+else{document.getElementById("12").innerHTML="";}
+}
+
+document.getElementById("yt").onchange=function(){
+if(document.getElementById("yt").checked==true){
+document.getElementById("13").innerHTML="<A HREF='yt.html'>Click link for more information on Yukon</A>";}
+else{document.getElementById("13").innerHTML="";}
+}
+
+
 
 
 
