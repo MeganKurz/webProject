@@ -1,11 +1,11 @@
 <?php
 header('Content-Type: application/json');
 $results = array();
-if(($_GET['arguments'][1]=='false')&&($_GET['arguments'][2]=='false')){
+if(($_GET['arguements'][1]=='false')&&($_GET['arguements'][2]=='false')){
     $results['error'] = 'Please select food or drink or both';
 }
 if(!isset($results['error'])){
-    $results['results'] = getData($_GET['arguments'][0],$_GET['arguments'][1],$_GET['arguments'][2]);
+    $results['suc'] = getData($_GET['arguements'][0],$_GET['arguements'][1],$_GET['arguements'][2]);
 }
 echo json_encode($results);
 
@@ -26,4 +26,4 @@ else{
 }
 $sqlResults = mysqli_query($mysqli,$sql) or die(mysqli_error($mysqli));
 return $sqlResults;
-}
+} 

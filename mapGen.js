@@ -189,28 +189,25 @@ YT.addListener('click', function(){
 }
 
 function sendLocation(province, location){
-    var food = document.getElementById("food").checked;
-    var drink = document.getElementById("drink").checked;
+    var info;
+    var food = document.getElementById("foodd").checked;
+    var drink = document.getElementById("drinkk").checked;
     $.ajax({
        type: "GET",
        url: 'loadmap.php',
         async: false,
        dataType: 'json',
-        data: {arguments:[province, food, drink]},
+        data: {arguements: [province, food, drink]},
        success: function(data) {
-           if (!(data.error)) {
-               info = JSON.stringify(data.results);
-               console.log("success");
-           }
-           else {
-               window.alert(data.error);
-               console.log("error");
-           }
-       }
+           window.alert('i worky');
+       },
+        error: function(data) {
+            window.alert('No worky');
+        }
     });
-   var accessData = JSON.parse(info);
+
     var string = "<p>";
-    for(var i = 0; i < accessData.length; i++){
+   /* for(var i = 0; i < accessData.length; i++){
         if(!(string.contains(accessData[i].item))){
             string += accessData[i].item+"<br>";
 
@@ -219,7 +216,7 @@ function sendLocation(province, location){
             string += accessData[i].name+"<br>";
         }
         
-    }
+    } */
     string += "</p>";
 
     var infowindow = new google.maps.InfoWindow({
