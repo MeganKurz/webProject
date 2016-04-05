@@ -26,7 +26,8 @@
 						<h2 class="title"><a href="#">Food Map</a></h2>
 						<div class="entry">
 							<div id="map"></div>
-    								<br>			  									
+    								<br>
+<div>	<p id="link"></p>		  									
 <A HREF="ab.html">Click link for more information on Alberta</A><br>
 <A HREF="bc.html">Click link for more information on British Columbia</A><br>
 <A HREF="mb.html">Click link for more information on Manitoba</A><br>
@@ -40,6 +41,7 @@
 <A HREF="qc.html">Click link for more information on Quebec</A><br>
 <A HREF="sk.html">Click link for more information on Saskatchewan</A><br>
 <A HREF="yt.html">Click link for more information on Yukon</A><br>
+</div>
 								
 							</div>
 						</div>
@@ -56,22 +58,22 @@
 										
 						<li>
 							<h2>Choose a Province/Territory</h2>
-							<form method="post" action="foodSelection.php">
+							<form onclick="bc()">
         						 <fieldset>
             
-                						<input type="checkbox" name="BC" value ="BC">British Columbia<br>
-               							<input type="checkbox" name="AB" value ="AB">Alberta<br>
-                						<input type="checkbox" name="SK" value = "SK">Saskatchewan<br>
-                						<input type="checkbox" name="MB" value = "MB">Manitoba<br>
-                						<input type="checkbox" name="NB" value = "NB">New Brunswick<br>
-                						<input type="checkbox" name="PE" value = "PE">Prince Edward Island<br>
-                						<input type="checkbox" name="NU" value = "NU">Nunavut<br>
-               							<input type="checkbox" name="NL" value = "NL">Newfoundland and Labrador<br>
-               							<input type="checkbox" name="NT" value = "NT">Northwest Territories<br>
-                						<input type="checkbox" name="NS" value = "NS">Nova Scotia<br>
-                						<input type="checkbox" name="ON" value = "ON">Ontario<br>
-                						<input type="checkbox" name="QC" value = "QC">Quebec<br>
-                						<input type="checkbox" name="YT" value = "YT">Yukon Territory<br>
+                						<input type="checkbox" onclick="bc()" name="BC" value ="BC" id="bc">British Columbia<br>
+               							<input type="checkbox" name="AB" value ="AB" id="ab">Alberta<br>
+                						<input type="checkbox" name="SK" value = "SK" id="sk">Saskatchewan<br>
+                						<input type="checkbox" name="MB" value = "MB" id="mb">Manitoba<br>
+                						<input type="checkbox" name="NB" value = "NB" id="nb">New Brunswick<br>
+                						<input type="checkbox" name="PE" value = "PE" id="pe">Prince Edward Island<br>
+                						<input type="checkbox" name="NU" value = "NU" id="nu">Nunavut<br>
+               							<input type="checkbox" name="NL" value = "NL" id="nl">Newfoundland and Labrador<br>
+               							<input type="checkbox" name="NT" value = "NT" id="nt">Northwest Territories<br>
+                						<input type="checkbox" name="NS" value = "NS" id="ns">Nova Scotia<br>
+                						<input type="checkbox" name="ON" value = "ON" id="on">Ontario<br>
+                						<input type="checkbox" name="QC" value = "QC" id="qc">Quebec<br>
+                						<input type="checkbox" name="YT" value = "YT" id="yt">Yukon Territory<br>
                 
         						 </fieldset>
                                                         </form>
@@ -101,4 +103,4 @@
 <script src ="mapGen.js"></script>
 </body>
 </html>
- 
+

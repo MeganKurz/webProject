@@ -201,6 +201,12 @@ function sendLocation(province, location){
 
 }
 
+function bc(){
+var bc = document.getElementById("bc").checked;
+if (bc==true){
+document.getElementById("link").innerHTML="heyyyy";}
+}
+
 
 
 
