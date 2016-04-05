@@ -308,6 +308,11 @@ document.getElementById("13").innerHTML="<A HREF='yt.html'>Click link for more i
 else{document.getElementById("13").innerHTML="";}
 }
 
+function logout(){
+window.location.href = "userlogin.html";
+
+}
+
 
 
 
