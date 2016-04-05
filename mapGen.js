@@ -313,6 +313,11 @@ window.location.href = "userlogin.html";
 
 }
 
+function home(){
+window.location.href = "welcomePage.html";
+
+}
+
 
 
 
