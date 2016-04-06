@@ -198,31 +198,31 @@ function sendLocation(province, location){
        dataType: 'json',
         data: {arguements: [province, food, drink]},
        success: function(data) {
-           window.alert('i worky');
+           info = data;
        },
         error: function(data) {
             window.alert('No worky');
         }
     });
-
+    var accessData = info.suc;
     var string = "<p>";
-   /* for(var i = 0; i < accessData.length; i++){
-        if(!(string.contains(accessData[i].item))){
-            string += accessData[i].item+"<br>";
+   for(var i = 0; i < accessData.length; i++){
+        if(string.search(accessData[i]) == -1){
+            string += accessData[i]+"<br>";
 
         }
-        if(!(string.contains(accessData[i].name))){
-            string += accessData[i].name+"<br>";
-        }
-        
-    } */
+
+    }
     string += "</p>";
 
     var infowindow = new google.maps.InfoWindow({
                     position: location,
                     content: string
                 });
-    infowindow.open(map,province);
+    infowindow.open(map);
+    google.maps.event.addListener(map, 'click', function() {
+        infoWindow.close();
+    });
 
 }
 

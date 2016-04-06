@@ -9,21 +9,27 @@ if(!isset($results['error'])){
 }
 echo json_encode($results);
 
-function getData($province, $foods, $drinks){
-$mysqli = mysqli_connect("localhost", "root", "marbles", "webProject");
-$prov = $province;
-$food = $foods;
-$drink = $drinks;
-if($food =="true" && $drink =="true"){
- $sql = "SELECT food.item, liquids.name FROM food INNER JOIN liquids "
-         . "ON food.prov=liquids.prov WHERE food.prov='$prov'"; 
-}
-else if($food == "true" && $drink == "false"){
-    $sql = "SELECT item FROM food WHERE prov = '$prov'";
-}
-else{
-    $sql = "SELECT name FROM liquids WHERE prov = '$prov'";
-}
-$sqlResults = mysqli_query($mysqli,$sql) or die(mysqli_error($mysqli));
-return $sqlResults;
+function getData($prov, $food, $drink){
+    $mysqli = mysqli_connect("localhost", "root", "marbles", "webProject");
+    if($food =="true" && $drink =="true"){
+        $sql = "SELECT food.item, liquids.name FROM food INNER JOIN liquids ".
+            "ON food.prov=liquids.prov WHERE food.prov='$prov'";
+    }
+    else if($food == "true" && $drink == "false"){
+        $sql = "SELECT item FROM food WHERE prov = '$prov'";
+    }
+    else{
+        $sql = "SELECT name FROM liquids WHERE prov = '$prov'";
+    }
+    $result = mysqli_query($mysqli,$sql) or die(mysqli_error($mysqli));
+    $data = array();
+    while ($info = mysqli_fetch_array($result)) {
+        if($info['item']){
+            $data[] = stripslashes($info['item']);
+        }
+        if($drink == "true"){
+            $data[] = stripslashes($info['name']);
+        }
+    }
+    return $data;
 } 
