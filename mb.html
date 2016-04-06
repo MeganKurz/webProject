@@ -86,10 +86,16 @@ and nutrient. Put in primary with enough water to bring volume to 5 gallons. Pit
 <script src ="mapGen.js"></script>
     <script>
         function getsugar() { 
-document.getElementById("rec1").style.display="initial";
+var see= document.getElementById("rec1").style.display;
+if (see=="initial"){
+document.getElementById("rec1").style.display="none";}
+else{document.getElementById("rec1").style.display="initial";}
 	 }
  function getbeer() {
-document.getElementById("rec2").style.display="initial"; 
+var see= document.getElementById("rec2").style.display;
+if (see=="initial"){
+document.getElementById("rec2").style.display="none";}
+else{document.getElementById("rec2").style.display="initial";}
 	 }
     </script>
 </body>

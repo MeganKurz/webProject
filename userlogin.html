@@ -5,8 +5,15 @@
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
+
 <form method="post" action="userlogin.php">
 <fieldset><legend>Login Form</legend>
+<div id="out" style="display:none;">
+<p>
+You have been logged out! You can log in again or as another user below.
+</p>
+<br>
+</div>
 <p><strong>email:</strong><br/>
 <input type="text" name="email"/></p>
 <p><strong>password:</strong><br/>

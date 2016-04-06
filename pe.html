@@ -80,10 +80,16 @@ cornflake crumbs and flour, seasoned with seasoning salt. Freeze on cookie sheet
 <script src ="mapGen.js"></script>
     <script>
         function getpotatos() { 
-document.getElementById("rec1").style.display="initial";
+var see= document.getElementById("rec1").style.display;
+if (see=="initial"){
+document.getElementById("rec1").style.display="none";}
+else{document.getElementById("rec1").style.display="initial";}
 	 }
  function getfishcakes() {
-document.getElementById("rec2").style.display="initial"; 
+var see= document.getElementById("rec2").style.display;
+if (see=="initial"){
+document.getElementById("rec2").style.display="none";}
+else{document.getElementById("rec2").style.display="initial";}
 	 }
     </script>
 </body>

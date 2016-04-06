@@ -79,10 +79,16 @@ and friction, where the water can then be collected.
 <script src ="mapGen.js"></script>
     <script>
         function getmussels() { 
-document.getElementById("rec1").style.display="initial";
+var see= document.getElementById("rec1").style.display;
+if (see=="initial"){
+document.getElementById("rec1").style.display="none";}
+else{document.getElementById("rec1").style.display="initial";}
 	 }
  function getice() {
-document.getElementById("rec2").style.display="initial"; 
+ var see= document.getElementById("rec2").style.display;
+if (see=="initial"){
+document.getElementById("rec2").style.display="none";}
+else{document.getElementById("rec2").style.display="initial";}
 	 }
     </script>
 </body>

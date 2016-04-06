@@ -92,10 +92,16 @@ Age for one year.
 <script src ="mapGen.js"></script>
     <script>
         function gethaddock() { 
-document.getElementById("rec1").style.display="initial";
+var see= document.getElementById("rec1").style.display;
+if (see=="initial"){
+document.getElementById("rec1").style.display="none";}
+else{document.getElementById("rec1").style.display="initial";}
 	 }
  function getgrapes() {
-document.getElementById("rec2").style.display="initial"; 
+var see= document.getElementById("rec2").style.display;
+if (see=="initial"){
+document.getElementById("rec2").style.display="none";}
+else{document.getElementById("rec2").style.display="initial";}
 	 }
     </script>
 </body>

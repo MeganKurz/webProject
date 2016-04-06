@@ -77,10 +77,16 @@ medium-low, and stir in the maple extract; simmer 3 minutes longer.
 <script src ="mapGen.js"></script>
     <script>
         function getfishchips() { 
-document.getElementById("rec1").style.display="initial";
+var see= document.getElementById("rec1").style.display;
+if (see=="initial"){
+document.getElementById("rec1").style.display="none";}
+else{document.getElementById("rec1").style.display="initial";}
 	 }
  function getsyrup() {
-document.getElementById("rec2").style.display="initial"; 
+var see= document.getElementById("rec2").style.display;
+if (see=="initial"){
+document.getElementById("rec2").style.display="none";}
+else{document.getElementById("rec2").style.display="initial";}
 	 }
     </script>
 </body>

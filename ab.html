@@ -93,10 +93,16 @@ Serve tea over ice in tall glasses and garnish with lemon slices.
 <script src ="mapGen.js"></script>
     <script>
         function getStew() { 
-document.getElementById("rec1").style.display="initial";
+var see= document.getElementById("rec1").style.display;
+if (see=="initial"){
+document.getElementById("rec1").style.display="none";}
+else{document.getElementById("rec1").style.display="initial";}
 	 }
  function gethoney() {
-document.getElementById("rec2").style.display="initial"; 
+var see= document.getElementById("rec2").style.display;
+if (see=="initial"){
+document.getElementById("rec2").style.display="none";}
+else{document.getElementById("rec2").style.display="initial";}
 	 }
     </script>
 </body>
