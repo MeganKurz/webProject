@@ -67,7 +67,7 @@ var PE = new google.maps.Circle({
   fillOpacity:0.4
   });
 var NU = new google.maps.Circle({
-  center: {lat: 66.501347, lng: -91.933594},
+  center: {lat: 66.290897, lng: -95.097656},
   radius:90000,
   strokeColor:"#0000FF",
   strokeOpacity:0.8,
@@ -85,7 +85,7 @@ var NL = new google.maps.Circle({
   fillOpacity:0.4
   });
 var NT = new google.maps.Circle({
-  center: {lat: 64.825544, lng: -124.845733},
+  center: {lat: 64.687080, lng: -116.367188},
   radius:90000,
   strokeColor:"#0000FF",
   strokeOpacity:0.8,
@@ -163,13 +163,13 @@ PE.addListener('click', function(){
     sendLocation("PE", {lat: 46.510712, lng: -63.416814});
 });
 NU.addListener('click', function(){
-    sendLocation("NU", {lat: 70.299771, lng: -83.107577});
+    sendLocation("NU", {lat: 66.290897, lng: -95.097656});
 });
 NL.addListener('click', function(){
-    sendLocation("NL", {lat: 64.825544, lng: -124.845733});
+    sendLocation("NL", {lat: 55.239044, lng: -61.171875});
 });
 NT.addListener('click', function(){
-    sendLocation("NT", {lat: 64.825544, lng: -124.845733});
+    sendLocation("NT", {lat: 64.687080, lng: -116.367188});
 });
 
 NS.addListener('click', function(){
@@ -319,14 +319,75 @@ function vis() {
 var mapDiv = document.getElementById('map');
 map = new google.maps.Map(mapDiv, {center: {lat:59.479906, lng: -108.281250}, zoom: 3});
 
-var marker=new google.maps.Marker({
+var bc=new google.maps.Marker({
+  position: {lat: 53.726668, lng: -127.647621},
+  icon:'pic/bc.jpg'
+  });
+var ab=new google.maps.Marker({
+  position: {lat: 53.933271, lng: -116.576504},
+  icon:'pic/ab.png'
+  });
+var sk=new google.maps.Marker({
+  position: {lat: 52.939916, lng: -106.450864},
+  icon:'pic/sk.jpg'
+  });
+var mb=new google.maps.Marker({
+  position: {lat: 54.395398, lng: -94.921875},
+  icon:'pic/mb.png'
+  });
+var nb=new google.maps.Marker({
+  position: {lat: 46.403321, lng: -69.257813},
+  icon:'pic/nb.jpg'
+  });
+var pe=new google.maps.Marker({
+  position: {lat: 47.065931, lng: -58.886719},
+  icon:'pic/pe.png'
+  });
+var nu=new google.maps.Marker({
+  position: {lat: 66.290897, lng: -95.097656},
+  icon:'pic/nu.jpg'
+  });
+var nl=new google.maps.Marker({
+  position: {lat: 55.239044, lng: -61.171875},
+  icon:'pic/nl.png'
+  });
+var nt=new google.maps.Marker({
+  position: {lat: 64.687080, lng: -116.367188},
+  icon:'pic/nt.png'
+  });
+var ns=new google.maps.Marker({
+  position: {lat: 42.881760, lng: -63.544922},
+  icon:'pic/ns.jpg'
+  });
+var on=new google.maps.Marker({
+  position: {lat: 51.253775, lng: -85.323214},
+  icon:'pic/on.jpg'
+  });
+var qc=new google.maps.Marker({
+  position: {lat: 52.939916, lng: -73.549136},
+  icon:'pic/qc.jpg'
+  });
+var yt=new google.maps.Marker({
   position: {lat: 64.282327, lng: -135.000000},
-  icon:'pic/cow.png'
+  icon:'pic/yt.gif'
   });
 
-marker.setMap(map);
-}
 
+
+bc.setMap(map);
+ab.setMap(map);
+sk.setMap(map);
+mb.setMap(map);
+nb.setMap(map);
+pe.setMap(map);
+nu.setMap(map);
+nl.setMap(map);
+nt.setMap(map);
+ns.setMap(map);
+on.setMap(map);
+qc.setMap(map);
+yt.setMap(map);
+}
 
 
 
