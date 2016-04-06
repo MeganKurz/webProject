@@ -307,7 +307,6 @@ else{document.getElementById("13").innerHTML="";}
 function logout(){
 window.location.href = "userlogin.html";
 document.getElementById("out").style.display="initial";
-
 }
 
 function home(){
