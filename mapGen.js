@@ -1,9 +1,8 @@
-/* global google */
 
 var map;
 function initMap() {
     var mapDiv = document.getElementById('map');
-    map = new google.maps.Map(mapDiv, {center: {lat:63.141651, lng: -113.378906}, zoom: 3});
+    map = new google.maps.Map(mapDiv, {center: {lat:59.479906, lng: -108.281250}, zoom: 3});
 }
 
 google.maps.event.addDomListener(window, 'load', initMap);
@@ -11,7 +10,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
 
 function initOverlay() {
 var mapDiv = document.getElementById('map');
-map = new google.maps.Map(mapDiv, {center: {lat:63.141651, lng: -113.378906}, zoom: 3});
+map = new google.maps.Map(mapDiv, {center: {lat:59.479906, lng: -108.281250}, zoom: 3});
 
 var BC = new google.maps.Circle({
   center: {lat: 53.726668, lng: -127.647621},
@@ -68,7 +67,7 @@ var PE = new google.maps.Circle({
   fillOpacity:0.4
   });
 var NU = new google.maps.Circle({
-  center: {lat: 70.299771, lng: -83.107577},
+  center: {lat: 66.501347, lng: -91.933594},
   radius:90000,
   strokeColor:"#0000FF",
   strokeOpacity:0.8,
@@ -77,7 +76,7 @@ var NU = new google.maps.Circle({
   fillOpacity:0.4
   });
 var NL = new google.maps.Circle({
-  center: {lat: 53.135509, lng: -57.660436},
+  center: {lat: 55.185894, lng: -60.908203},
   radius:90000,
   strokeColor:"#0000FF",
   strokeOpacity:0.8,
@@ -316,7 +315,17 @@ window.location.href = "welcomePage.html";
 }
 
 
+function vis() {
+var mapDiv = document.getElementById('map');
+map = new google.maps.Map(mapDiv, {center: {lat:59.479906, lng: -108.281250}, zoom: 3});
 
+var marker=new google.maps.Marker({
+  position: {lat: 64.282327, lng: -135.000000},
+  icon:'pic/cow.png'
+  });
+
+marker.setMap(map);
+}
 
 
 
