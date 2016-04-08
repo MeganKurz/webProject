@@ -10,7 +10,7 @@ if(!isset($results['error'])){
 echo json_encode($results);
 
 function getData($prov, $food, $drink){
-    $mysqli = mysqli_connect("localhost", "root", "marbles", "webProject");
+    $mysqli = mysqli_connect("localhost", "cs360user", "letmein", "webProject");
     if($food =="true" && $drink =="true"){
         $sql = "SELECT food.item, liquids.name FROM food INNER JOIN liquids ".
             "ON food.prov=liquids.prov WHERE food.prov='$prov'";

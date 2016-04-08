@@ -8,7 +8,7 @@ if (!filter_input(INPUT_POST, 'email')
 }
 else{
 //connect to server and select database
-$mysqli = mysqli_connect("localhost", "root", "marbles", "webProject");
+$mysqli = mysqli_connect("localhost", "cs360user", "letmein", "webProject");
 
 //create and issue the query
 
