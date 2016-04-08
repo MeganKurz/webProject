@@ -286,8 +286,8 @@ document.getElementById("10").innerHTML="<A HREF='ns.html'>Click link for more i
 else{document.getElementById("10").innerHTML="";}
 }
 
-document.getElementById("on").onchange=function(){
-if(document.getElementById("on").checked==true){
+document.getElementById("ont").onchange=function(){
+if(document.getElementById("ont").checked==true){
 document.getElementById("11").innerHTML="<A HREF='on.html'>Click link for more information on Ontario</A>";}
 else{document.getElementById("11").innerHTML="";}
 }
